@@ -4,7 +4,7 @@ const cartProductsLoader = async () => {
     const loadedProducts = await fetch('products.json');
     const products = await loadedProducts.json();
 
-    // if cart data is in database, you have to use async await
+    // if cart data is in database, I have to use async await
     const storedCart = getShoppingCart();
 
     const savedCart = [];
@@ -18,7 +18,7 @@ const cartProductsLoader = async () => {
         }
     }
 
-    // if you need to send two things
+    // if I need to send two things
     // return [products, savedCart]
     // another options
     // return { products, cart: savedCart }

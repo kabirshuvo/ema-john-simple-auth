@@ -1,18 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Shop from './components/Shop/Shop';
-import Home from './components/Layout/Home';
-import Orders from './components/Orders/Orders';
-import Inventory from './components/Inventory/Inventory';
-import Login from './components/Login/Login';
-import cartProductsLoader from './loaders/cartProductsLoader';
 import Checkout from './components/Checkout/Checkout';
+import Inventory from './components/Inventory/Inventory';
+import Home from './components/Layout/Home';
+import Login from './components/Login/Login';
+import Orders from './components/Orders/Orders';
+import Shop from './components/Shop/Shop';
+import SignUp from './components/SignUp/SignUp';
+import './index.css';
+import cartProductsLoader from './loaders/cartProductsLoader';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: 'login',
         element: <Login></Login>
+      },
+      {
+        path: 'signup',
+        element: <SignUp></SignUp>
       }
     ]
   }
