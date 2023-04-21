@@ -7,7 +7,9 @@ const Header = () => {
     return (
         
         <nav className='header'>
+            <div>
             <Link to="/"><img src={logo} alt="" /></Link>
+            </div>
             
             <div>
                 <Link to="/">Shop</Link>
