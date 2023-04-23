@@ -7,6 +7,7 @@ import './Header.css';
 const Header = () => {
 
         const {user, } = useContext(AuthContext)
+        console.log(user)
 
 
     return (
@@ -23,7 +24,7 @@ const Header = () => {
                 <Link to="/login">Log-In</Link>
                 <Link to='/signup'>Sign-Up</Link>
 
-                {user && <span>Welconse {user}</span>}
+                {user && <span>{user.email}</span>}
 
             </div>
         </nav>
