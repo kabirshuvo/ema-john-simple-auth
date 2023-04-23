@@ -24,7 +24,7 @@ const Header = () => {
                 <Link to="/login">Log-In</Link>
                 <Link to='/signup'>Sign-Up</Link>
 
-                {user && <span>{user.email}</span>}
+                {user && <span style={{color: '#fff', marginLeft: '1rem'}}> Welcome: {user}</span>}
 
             </div>
         </nav>
