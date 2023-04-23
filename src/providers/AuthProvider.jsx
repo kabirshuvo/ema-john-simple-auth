@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import React, { createContext, useEffect, useState } from 'react';
 import app from "../firebase/firebase_config";
 
@@ -21,7 +21,21 @@ const AuthProvider = ({children}) => {
     return signOut(auth);
    }
 
-   useEffect(, [])
+   
+
+   //* SettingUp Observer on user auth state
+   useEffect(() => {
+    const unsubscribe =  onAuthStateChanged(auth, currentUser => {
+          setuser(currentUser);
+
+      });
+
+  //* Stopping the Observation while unmounting
+
+      return () => {
+          return unsubscribe();
+      }
+ }, [])
 
 
     const authInfo = {

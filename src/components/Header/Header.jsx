@@ -6,7 +6,7 @@ import './Header.css';
 
 const Header = () => {
 
-        const {user, logOut } = useContext(AuthContext)
+        const {user, logOut} = useContext(AuthContext)
         console.log(user)
 
         const handleLogOut = () => {
@@ -30,7 +30,7 @@ const Header = () => {
                 <Link to="/login">Log-In</Link>
                 <Link to='/signup'>Sign-Up</Link>
 
-                {user && <span style={{color: '#fff', marginLeft: '1rem'}}> Welcome: {user} <button onClick={handleLogOut}>SignOut</button></span>}
+                {user && <span style={{color: '#fff', marginLeft: '1rem'}}> Welcome: {user.email} <button onClick={handleLogOut}>SignOut</button></span>}
 
             </div>
         </nav>
